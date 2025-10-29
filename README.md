@@ -14,4 +14,3 @@ curl -fsSL https://raw.githubusercontent.com/reyx/xfa2acro-repair/main/install.s
 xfa2acro-repair ~/Downloads/g-1450.pdf
 # -> ~/Downloads/g-1450.safe.pdf
 ```
-
