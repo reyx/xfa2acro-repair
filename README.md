@@ -86,4 +86,18 @@ git merge --ff-only origin/release/v$VER
 
 # push updated main
 git push origin main
+
+# pick the next version after the release
+export NEXT=1.0.1-SNAPSHOT
+
+mvn -q versions:set -DnewVersion=$NEXT
+mvn -q versions:commit
+
+git add -A
+git commit -m "chore: start $NEXT on main"
+git push origin main
+
+# delete the release branch
+git push origin :release/v$VER
+git branch -d release/v$VER
 ```
