@@ -76,4 +76,14 @@ gh release create "v$VER" "$ARTIFACT" \
   --target main \
   --title "v$VER" \
   --generate-notes
+
+git fetch origin
+git checkout main
+git pull --rebase
+
+# fast-forward main to the release branch (no merge commit)
+git merge --ff-only origin/release/v$VER
+
+# push updated main
+git push origin main
 ```
