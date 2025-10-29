@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-JAR_URL="https://github.com/reyx/xfa2acro-repair/releases/download/v1.0.1/xfa2acro-repair.jar"
+JAR_URL="https://github.com/reyx/xfa2acro-repair/releases/download/v1.0.1/xfa2acro-repair-1.0.1.jar"
 
 APP_NAME="xfa2acro-repair"
 APP_DIR="/usr/local/lib/${APP_NAME}"
