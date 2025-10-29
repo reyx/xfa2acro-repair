@@ -57,3 +57,23 @@ mvn -B -DskipTests package
 git add -A
 git commit -m "chore(release): v$VER"
 ```
+
+### push
+
+```bash
+git tag -a v$VER -m "v$VER"
+git push origin release/v$VER
+git push origin v$VER
+```
+
+### create release
+
+```bash
+ARTIFACT="target/xfa2acro-repair-$VER.jar"
+
+# auto-generate release notes and attach the artifact
+gh release create "v$VER" "$ARTIFACT" \
+  --target main \
+  --title "v$VER" \
+  --generate-notes
+```
